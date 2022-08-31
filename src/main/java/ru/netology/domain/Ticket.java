@@ -2,11 +2,11 @@ package ru.netology.domain;
 
 import ru.netology.manager.TicketManager;
 
-public class Ticket implements Comparable <Ticket> {
-    private int id;
-    private int price;
-    private int travelTime;
+public class Ticket implements Comparable<Ticket> {
+    protected int id;
+    protected int price;
 
+    protected int travelTime;
     protected String from;
     protected String to;
 
@@ -43,9 +43,9 @@ public class Ticket implements Comparable <Ticket> {
         if (price < o.price) {
             return -1;
         }
-        if (price > o.price){
+        if (price > o.price) {
             return 1;
-        }else {
+        } else {
             return 0;
         }
     }
